@@ -15,7 +15,7 @@ Similar (or quantitatively somewhat better) observations have been made in [1], 
 
 [1] Fukang Liu, Mohammad Mahzoun, Morten Øygarden, Willi Meier, "Algebraic Attacks on RAIN and AIM Using Equivalent Representations." IACR ePrint 2023/1133 https://eprint.iacr.org/2023/1133
 
-The extremely simple structure of AIM encourages one to look for significantly faster attacks; AIM would be almost revolutionary as a symmetric primitive if it proves to have even this level of security. I've made a simple Python implementation of AIM-1/3/5 (with some test vectors) available at https://github.com/mjosaarinen/aim-sym-py to encourage further analysis by cryptographers.
+The extremely simple structure of AIM encourages one to look for significantly faster attacks; AIM would be almost revolutionary as a symmetric primitive if it proves to have even this level of security. I've made a simple Python implementation of AIM-1/3/5 (with some test vectors) available at https://github.com/mjosaarinen/aim-sym-py/aim.py to encourage further analysis by cryptographers.
 
 
 ##  Background
