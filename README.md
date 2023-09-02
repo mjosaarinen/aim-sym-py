@@ -60,5 +60,5 @@ In case of AIM-1, the search of "x" satisfying
 ```
 In a search for "x" satisfying the condition, one generates a sequence of x1,x2,x3.. and corresponding z1,z2,z3.. `z=x^-1` at the same time using a generator and its inverse. The generator for z is not much more complex than x if LFSRs are used.
 
-We can observe that this circuit consists of 7 multiplications and some n-bit xors. Collapsing the ANDs and XORs of constant binary matrix A1,A2,E3,E5,E27 multiplication into netlist optimization should allow significant optimizations. It is much simpler than an AES-128 key search circuit (which contains AES subkey expansion and trial encryption functions.) Handling the "z" inverse sequence in a quantum oracle may be trickier than in a classical setting.
+We can observe that this circuit consists of 7 multiplications and some n-bit xors. Collapsing the ANDs and XORs of constant binary matrix A1,A2,E3,E5,E27 multiplication into netlist optimization should allow significant optimizations. It is much simpler than an AES-128 key search circuit (which contains AES subkey expansion and trial encryption functions.) Handling the "z" inverse sequence in a quantum oracle may be trickier than in a classical setting, however.
 
