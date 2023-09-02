@@ -9,9 +9,9 @@ The file `test_matrix.py` demonstrates the exponentiation-free version discussed
 
 #   Summary
 
-We note that the bit complexity of recovering x in AIM-1/3/5 is lower than the key search circuit for AES-128/192/256. Since the inversion of AIM is equivalent to solving the AIMer secret key from the public key, the security of AIMer does not meet the claims.
+We observe that the bit complexity of recovering x in AIM-1/3/5 is lower than the key search circuit for AES-128/192/256. Since the inversion of AIM is equivalent to solving the AIMer signature scheme secret key from its public key, the security of AIMer does not appear to meet its security claims.
 
-Similar (or quantitatively somewhat better) observations have been made in [1], which presents an algebraic attack that sheds 2^13,2^14,2^15 from operations against AIM-1/3/5. Based on their analysis, one can estimate that the security of AIMer falls short of the target by at least 16 bits.
+Similar (or quantitatively somewhat better) observations have also been made in [1], which presents an algebraic attack that sheds 2^13,2^14,2^15 from operations against AIM-1/3/5. Based on their analysis, one can estimate that the security of AIMer falls short of the target by at least 16 bits.
 
 [1] Fukang Liu, Mohammad Mahzoun, Morten Øygarden, Willi Meier, "Algebraic Attacks on RAIN and AIM Using Equivalent Representations." IACR ePrint 2023/1133 https://eprint.iacr.org/2023/1133
 
