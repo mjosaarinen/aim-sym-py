@@ -2,10 +2,14 @@
 2023-09-02  Markku-Juhani O. Saarinen <mjos@pqshield.com>
 
 
-The file `aim.py` provides a simple implementation of core AIM-1/3/5 one-way functions, and also contains a test "main" with some test vectors derived from the official AIMer KAT test vectors.
-It uses basic finite field functions defined in `gf_ari.py`.
+The file `aim.py` provides a simple implementation of core AIM-1/3/5 one-way functions [0], and also contains a test "main" with some test vectors derived from the official AIMer KAT test vectors. It uses basic finite field functions defined in `gf_ari.py`.
 
 The file `test_matrix.py` demonstrates the exponentiation-free version discussed below.
+
+AIMer documentation and C reference implementation can be found at https://csrc.nist.gov/Projects/pqc-dig-sig/round-1-additional-signatures A reference for the algorithm is:
+
+[0] Seongkwang Kim, Jihoon Cho, Mingyu Cho, Jincheol Ha, Jihoon Kwon, Byeonghak Lee, Joohee Lee Jooyoung Lee, Sangyub Lee, Dukjae Moon, Mincheol Son, and Hyojin Yoon, *"The AIMer Signature Scheme: Submission to the NIST PQC project, Version 1."* Dated 1 June 2023. https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/AIMer-spec-web.pdf
+
 
 #   Summary
 
@@ -13,7 +17,7 @@ We observe that the bit complexity of recovering x in AIM-1/3/5 is lower than th
 
 Similar (or quantitatively somewhat better) observations have also been made in [1], which presents an algebraic attack that sheds 2^13,2^14,2^15 from operations against AIM-1/3/5. Based on their analysis, one can estimate that the security of AIMer falls short of the target by at least 16 bits.
 
-[1] Fukang Liu, Mohammad Mahzoun, Morten Øygarden, Willi Meier, "Algebraic Attacks on RAIN and AIM Using Equivalent Representations." IACR ePrint 2023/1133 https://eprint.iacr.org/2023/1133
+[1] Fukang Liu, Mohammad Mahzoun, Morten Øygarden, Willi Meier, *"Algebraic Attacks on RAIN and AIM Using Equivalent Representations."* IACR ePrint 2023/1133. https://eprint.iacr.org/2023/1133
 
 The extremely simple structure of AIM encourages one to look for significantly faster attacks; AIM would be almost revolutionary as a symmetric primitive if it proves to have even this level of security. I've made a simple Python implementation of AIM-1/3/5 (with some test vectors) available at https://github.com/mjosaarinen/aim-sym-py/blob/main/aim.py to encourage further analysis by cryptographers.
 
